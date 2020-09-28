@@ -1,3 +1,21 @@
+## React Demo Program
+
+This is a tiny demonstration exercise just to see how to approach React programming.
+
+To do the exercise:
+ * Fork this repository on github.
+ * Make sure you can run the code. You'll need to install dependencies.
+It should produce a big blue box in your favourite browser when you run it.
+ * Add code to your version of the exercise to allow the user to add
+ circles inside the blue box by pressing a button. Just fixed-sized circles, as many as the user wants. Make the circles draggable to reposition them. Remember the position of all the circles in React state.
+ * If you are really enthusiastic you could try drawing connections between circles, or changing their color, or anything more interesting. But really this is just an exercise in copying and understanding code, React and git.
+ * when you're finished, you can commit your code to your repository and send a pull request back here.
+ * Feel free to use any technology you want. Any open source library, any ready-made solution.
+
+ Have fun!
+
+ ----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
