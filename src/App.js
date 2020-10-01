@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import { Box } from './box';
+import Button from 'react-bootstrap/Button';
 
 function App() {
+  const [circleCount, setCircles] = useState(0);
+
+  function setCircleCount() {
+    var count = parseInt(localStorage.getItem("cCount"));
+    if (isNaN(count)) {
+      setCircles(1);
+    } else {
+      setCircles(count + 1);
+    }
+    localStorage.setItem("cCount", circleCount + 1);
+  };
+
+  useEffect(() => {
+    var count = parseInt(localStorage.getItem("cCount"));
+    if (isNaN(count)) {
+      setCircles(0);
+    } else {
+      setCircles(count);
+    }
+  }, []);
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -20,7 +41,11 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Box />
+      <Box circles={circleCount} />
+      <br />
+      <Button variant="primary" onClick={setCircleCount}>Add Circle</Button>{' '}
+      <br />
+      We have {circleCount} circle(s) now. {' '}
     </div>
   );
 }
